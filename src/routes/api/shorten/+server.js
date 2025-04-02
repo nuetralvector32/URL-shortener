@@ -6,7 +6,8 @@ import { generateShortCode } from '$lib/shorten';
 export async function POST({ request, env }) {
   try {
     const { longUrl } = await request.json();
-
+    console.log(env);
+    console.log(env.LINKS_KV);
     // Validate the URL
     try {
       new URL(longUrl);
